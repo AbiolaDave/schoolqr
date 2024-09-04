@@ -29,7 +29,7 @@ const EventsCounter = (admin) => {
     const fetchEvent = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5007/counter/counterpage/${eventId}`
+          `https://school-backend-n4tv.onrender.com/counter/counterpage/${eventId}`
         );
         setEvent(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ const EventsCounter = (admin) => {
     },
     onSubmit: async (values) => {
       if (window.confirm("Are you sure you want to submit count?")) {
-        let url = "http://localhost:5007/counter/count";
+        let url = "https://school-backend-n4tv.onrender.com/counter/count";
         console.log(values, "Form Values");
         let { male, female, children, vehicles, motorbikes, firsttimers } =
           values;

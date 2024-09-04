@@ -16,7 +16,7 @@ const AddCourse = (props) => {
   const [displayDetails, setDisplayDetails] = useState(false);
   const qrRef = useRef(null);
 
-  let url = "http://localhost:5007/admin/adminpage";
+  let url = "https://school-backend-n4tv.onrender.com/admin/adminpage";
 
   const downloadQRCode = () => {
     html2canvas(qrRef.current).then((canvas) => {
@@ -28,7 +28,7 @@ const AddCourse = (props) => {
   };
 
   useEffect(() => {
-    let url = "http://localhost:5007/admin/alllecturers";
+    let url = "https://school-backend-n4tv.onrender.com/admin/alllecturers";
     axios.post(url, props).then((response) => {
       if (response) {
         console.log(response.data);

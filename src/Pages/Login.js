@@ -18,20 +18,13 @@ const divStyle = {
   top: "48px",
 };
 const Login = () => {
-  let url = "http://localhost:5007/user/login";
+  let url = "https://school-backend-n4tv.onrender.com/user/login";
 
   const [registeredUsers, setregisteredUsers] = useState([]);
   const [loginUsers, setloginUsers] = useState([]);
   const [errorMessage, seterrorMessage] = useState(false);
 
-  // useEffect(() => {
-  //   if (localStorage.allUsers) {
-  //     let localallUsers = JSON.parse(localStorage.allUsers);
-  //     setregisteredUsers(localallUsers);
-  //   } else {
-  //     setregisteredUsers([]);
-  //   }
-  // }, []);
+
 
   let navigate = useNavigate();
   // const dispatch = useDispatch();
@@ -55,36 +48,7 @@ const Login = () => {
         }
       });
 
-      // axios.post(url, { email, password }).then((response) => {
-      //   if (!response.data.status) {
-      //     console.log(response.data.message);
-      //   } else {
-      //     localStorage.token = response.data.token;
-      //     navigate("/dashboard");
-      //   }
-      // });
-      // setloginUsers(() => {
-      //   let recentLoginUsers = [...loginUsers, loginObj];
-      //   localStorage.allLoginUsers = JSON.stringify(recentLoginUsers);
-      //   console.log(recentLoginUsers);
-
-      //           let currentUser = registeredUsers.find(
-      //             (user) =>
-      //               user.email === formik.values.email &&
-      //               user.password === formik.values.password
-      //           );
-      //           if (currentUser) {
-      //             // User is registered, redirect to admin page
-      //             navigate("/dashboard");
-      //           } else {
-      //             // User is not registered, display an error message or handle as needed
-      //             seterrorMessage(true)
-      //           }
-
-      //   return recentLoginUsers;
-      // });
-
-      // formik.resetForm;
+ 
     },
     validationSchema: yup.object({
       email: yup

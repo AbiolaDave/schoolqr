@@ -8,7 +8,7 @@ const StudentProfile = (props) => {
   const [middlename, setmiddlename] = useState("");
   const [user, setuser] = useState("");
 
-  let url = "http://localhost:5007/student/studentPage";
+  let url = "https://school-backend-n4tv.onrender.com/student/studentPage";
   let token = localStorage.studentToken;
 
 
@@ -48,7 +48,7 @@ const StudentProfile = (props) => {
       <div>
         <div className="profile-pics">
           <img
-            src={`http://localhost:5007/${user.profile_picture}`}
+            src={`https://school-backend-n4tv.onrender.com/${user.profile_picture}`}
             alt="Profile"
           />
         </div>

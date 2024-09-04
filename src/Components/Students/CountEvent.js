@@ -51,7 +51,7 @@ const CountEvent = (props) => {
 
   const sendReq = async (result) => {
     try {
-      let url = "http://localhost:5007/counter/countevent";
+      let url = "https://school-backend-n4tv.onrender.com/counter/countevent";
       let scannedAdmin = result;
       let user = props.userName;
       axios.post(url, { scannedAdmin, user }).then((response) => {
@@ -98,7 +98,7 @@ const CountEvent = (props) => {
         counter,
       );
       try {
-        let url = "http://localhost:5007/counter/update";
+        let url = "https://school-backend-n4tv.onrender.com/counter/update";
 
         await axios
           .post(url, {

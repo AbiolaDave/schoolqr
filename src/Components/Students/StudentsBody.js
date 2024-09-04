@@ -67,63 +67,6 @@ const StudentsBody = (props) => {
           </div>
         </div>
       </div>
-      {/* <section className="heroes">
-        <div className="container d-flex mt-1">
-          <div className="enroll mx-5 mt-5">
-            <h1>Easy Attendance And Record Tracking</h1>
-            <p>
-              Easy attendance marking using Qr-Code. Safe and secure records
-              keeping. View lecturers details, student details and performance
-              and course allocation
-            </p>
-          </div>
-          <div className="simplify">
-            <img src={img14} alt="" />
-          </div>
-        </div>
-        <div class="blog-grid">
-          <div class="box0">
-            <img src={img12} alt="" />
-            <div class="tag">Lecturer</div>
-            <h5 class="">View All Lecturers</h5>
-            <p>
-              View all lecturers registered. View lecturers details, course they
-              are assigned to and attendace records
-            </p>
-            <hr />
-            <div class="author">
-              <button className="btn btn-success mx-3">View Lecturer</button>
-            </div>
-          </div>
-          <div class="box0">
-            <img src={img6} alt="" />
-            <div class="tag p-2">Students</div>
-            <h5>View All Students</h5>
-            <p>
-              Register students easily. Monitor students activities, attendace
-              records and performance records
-            </p>
-            <hr />
-            <div class="author d-flex">
-              <button className="btn btn-success mx-3">Add Students</button>
-            </div>
-          </div>
-          <div class="box0">
-            <img src={img10} alt="" />
-            <div class="tag">Course</div>
-            <h5>Add Courses</h5>
-            <p>
-              Add courses available to lecturers and students. Keep track with
-              number of students offering each course
-            </p>
-            <hr />
-            <div class="author d-flex">
-              <button className="btn btn-success mx-3">Add Courses</button>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      {/* </div> */}
     </>
   );
 };

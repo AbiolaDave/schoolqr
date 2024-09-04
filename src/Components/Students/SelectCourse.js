@@ -7,7 +7,7 @@ const SelectCourse = (props) => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    let url = "http://localhost:5007/student/selectcourse";
+    let url = "https://school-backend-n4tv.onrender.com/student/selectcourse";
     let user = props.user;
 
     axios
@@ -29,7 +29,7 @@ const SelectCourse = (props) => {
       courseNames: [],
     },
     onSubmit: (values) => {
-      let url = "http://localhost:5007/student/addstudentcourse";
+      let url = "https://school-backend-n4tv.onrender.com/student/addstudentcourse";
       let user = props.user
       if (window.confirm("Add New Event?")) {
         let eventObj = {

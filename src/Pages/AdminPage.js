@@ -24,7 +24,7 @@ const AdminPage = () => {
 
   let Admintoken = localStorage.Admintoken;
   let navigate = useNavigate();
-  let url = "http://localhost:5007/admin/adminpage";
+  let url = "https://school-backend-n4tv.onrender.com/admin/adminpage";
 
   const [user, setuser] = useState("");
   const [admin, setadmin] = useState("");

@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import "../Components/Admin/createEvents.css";
+import "../Components/Admin/eventList.css";
 import FooterComp from "../Components/FooterComp";
 import MainNavbar from "../Components/MainNavbar";
 import MarkAttendance from "../Components/Students/MarkAttendance";
@@ -11,9 +13,6 @@ import StudentProfile from "../Components/Students/StudentProfile";
 import StudentsBody from "../Components/Students/StudentsBody";
 import StudentsMenu from "../Components/Students/StudentsMenu";
 import { resetPage } from "../Components/redux/newEvent";
-import "../Components/Admin/createEvents.css";
-import "../Components/Admin/eventList.css";
-
 
 const StudentPage = () => {
   const dispatch = useDispatch();
@@ -22,7 +21,7 @@ const StudentPage = () => {
 
   let token = localStorage.studentToken;
   let navigate = useNavigate();
-  let url = "http://localhost:5007/student/studentpage";
+  let url = "https://school-backend-n4tv.onrender.com/student/studentpage";
 
   const [user, setuser] = useState("");
   const [admin, setadmin] = useState("");
@@ -59,82 +58,13 @@ const StudentPage = () => {
       });
   }, []);
 
-  // useEffect(() => {
-  //   const fetchNotifications = async () => {
-  //     let url = "http://localhost:5007/student/notification";
-  //     let counter = userName;
-
-  //     console.log(counter, userName, user, "coordi");
-
-  //     try {
-  //       const response = await axios.post(url, { counter });
-  //       if (!response.data.status) {
-  //         console.log(response.data.message);
-  //       } else {
-  //         if (response.data.notification) {
-  //           setcounterNotification(response.data.notification);
-  //         }
-  //         await setcounterNotification(response.data.notification);
-  //         await console.log(
-  //           response.data.message,
-  //           response.data.notification,
-  //           "message",
-  //           counterNotification
-  //         );
-  //       }
-  //     } catch (error) {
-  //       console.error("Error fetching events:", error);
-  //     }
-  //   };
-
-  //   if (userName) {
-  //     fetchNotifications();
-  //   }
-  //   if (user) {
-  //     getRejected();
-  //   }
-  // }, [userName]);
-
-  // const getRejected = async () => {
-  //   let url = "http://localhost:5007/counter/rejected";
-  //   let counter = user;
-  //   console.log(counter, "jjjj");
-  //   try {
-  //     axios.post(url, { counter }).then((response) => {
-  //       if (response.data.status) {
-  //         console.log(response.data);
-  //         window.confirm("count rejected");
-  //       } else {
-  //         console.log(response.data);
-  //       }
-  //     });
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   setnotification(counterNotification);
-  //   console.log(notification, "notify me");
-  // }, [counterNotification]);
-
   let componentToDisplay;
 
   if (createNewEvent.newEvent.createEvent === "empty") {
     componentToDisplay = <StudentsBody user={user} admin={admin} />;
   } else if (createNewEvent.newEvent.createEvent === "profile") {
     componentToDisplay = <StudentProfile user={user} admin={admin} />;
-  }
-  // else if (createNewEvent.newEvent.createEvent === "addcourse") {
-  //   componentToDisplay = (
-  //     <AddCourse user={user} admin={admin} AdminqrCode={AdminqrCode} />
-  //   );
-  // } else if (createNewEvent.newEvent.createEvent === "addlecturer") {
-  //   componentToDisplay = <AddLecturer user={user} admin={admin} />;
-  // } else if (createNewEvent.newEvent.createEvent === "addstudent") {
-  //   componentToDisplay = <AddStudent user={user} admin={admin} />;
-  // }
-  else if (createNewEvent.newEvent.createEvent === "viewcourses") {
+  } else if (createNewEvent.newEvent.createEvent === "viewcourses") {
     componentToDisplay = <StudentCourses user={user} admin={admin} />;
   } else if (createNewEvent.newEvent.createEvent === "viewlecturers") {
     componentToDisplay = <MarkAttendance user={user} admin={admin} />;

@@ -34,7 +34,7 @@ const Events = () => {
     const fetchEvent = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5007/admin/adminpage/${eventId}`
+          `https://school-backend-n4tv.onrender.com/admin/adminpage/${eventId}`
         );
         setEvent(response.data);
       } catch (error) {
@@ -54,7 +54,7 @@ const Events = () => {
 
   const getFinalCount = async () => {
     if (event) {
-      let url = "http://localhost:5007/admin/getfinalcount";
+      let url = "https://school-backend-n4tv.onrender.com/admin/getfinalcount";
       let unique = event.uniqueId;
       try {
         axios.post(url, { unique, coordinator }).then((response) => {
@@ -79,7 +79,7 @@ const Events = () => {
     try {
       const confirmDelete = window.confirm("Delete this event?");
       if (confirmDelete) {
-        await axios.delete(`http://localhost:5007/admin/adminpage/${eventId}`);
+        await axios.delete(`https://school-backend-n4tv.onrender.com/admin/adminpage/${eventId}`);
         alert("Event deleted successfully");
         navigate("/adminpage");
       }
@@ -152,7 +152,7 @@ const Events = () => {
     await setFinalCount(true);
     await setAcceptedCounts(totalCount);
     console.log(finalCount, acceptedCounts, "accept");
-    let url = "http://localhost:5007/admin/finalcount";
+    let url = "https://school-backend-n4tv.onrender.com/admin/finalcount";
     try {
       axios.post(url, { totalCount }).then((response) => {
         if (response.data.status) {
@@ -173,7 +173,7 @@ const Events = () => {
     if (confirmReject) {
       await setDecline(true)
       await setRejectedCounts(totalCount);
-      let url = "http://localhost:5007/admin/rejectcount";
+      let url = "https://school-backend-n4tv.onrender.com/admin/rejectcount";
       try {
         axios.post(url, { totalCount }).then((response) => {
           if (response.data.status) {
@@ -201,7 +201,7 @@ const Events = () => {
   }, [eventCounter]);
 
   const getTotalCount = async () => {
-    let url = "http://localhost:5007/admin/totalcounts";
+    let url = "https://school-backend-n4tv.onrender.com/admin/totalcounts";
     let coord = event.countCoordinator;
     let unique = event.uniqueId;
     console.log(unique, coord, "sendinggggg");
@@ -220,7 +220,7 @@ const Events = () => {
   };
 
   const sendNot = async () => {
-    let url = "http://localhost:5007/admin/notification";
+    let url = "https://school-backend-n4tv.onrender.com/admin/notification";
     let counter = await eventCounter;
     let admin = await Admin;
     try {
@@ -251,7 +251,7 @@ const Events = () => {
   }, [event]);
 
   const sendCoord = async () => {
-    let url = "http://localhost:5007/admin/coordnotification";
+    let url = "https://school-backend-n4tv.onrender.com/admin/coordnotification";
     let Coordinator = await coordinator;
     let admin = await Admin;
     try {

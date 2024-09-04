@@ -51,7 +51,7 @@ const MarkAttendance = (props) => {
 
   const sendReq = async (result) => {
     try {
-      let url = "http://localhost:5007/student/markattendance";
+      let url = "https://school-backend-n4tv.onrender.com/student/markattendance";
       let scannedAdmin = result;
       let user = props.user;
       axios.post(url, { scannedAdmin, user }).then((response) => {
@@ -98,7 +98,7 @@ const MarkAttendance = (props) => {
         counter
       );
       try {
-        let url = "http://localhost:5007/counter/update";
+        let url = "https://school-backend-n4tv.onrender.com/counter/update";
 
         await axios
           .post(url, {

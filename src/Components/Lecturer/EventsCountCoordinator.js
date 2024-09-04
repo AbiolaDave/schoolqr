@@ -36,7 +36,7 @@ const EventsCountCoordinator = (admin) => {
     const fetchEvent = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5007/countcoordinator/countcoordinator/${eventId}`
+          `https://school-backend-n4tv.onrender.com/countcoordinator/countcoordinator/${eventId}`
         );
         setEvent(response.data);
         // findcount()
@@ -50,7 +50,7 @@ const EventsCountCoordinator = (admin) => {
   }, [eventId, rejectedCounts]);
 
   const submitCount = async () => {
-    let url = "http://localhost:5007/countcoordinator/submit";
+    let url = "https://school-backend-n4tv.onrender.com/countcoordinator/submit";
     let submittedCount = {
       totalMale,
       totalFemale,

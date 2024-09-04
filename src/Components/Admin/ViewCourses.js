@@ -16,7 +16,8 @@ const ViewCourses = (props) => {
     console.log(props, props.admin);
     const sendReq = async () => {
       try {
-        let url = "http://localhost:5007/admin/adminpage/courses";
+        let url =
+          "https://school-backend-n4tv.onrender.com/admin/adminpage/courses";
         let admin = props.admin;
         let AdminqrCode = props.AdminqrCode;
         const response = await axios.post(url, { admin, AdminqrCode });

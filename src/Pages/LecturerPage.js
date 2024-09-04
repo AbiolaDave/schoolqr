@@ -23,7 +23,7 @@ const LecturerPage = () => {
 
   let token = localStorage.lecturerToken;
   let navigate = useNavigate();
-  let url = "http://localhost:5007/lecturer/lecturerpage";
+  let url = "https://school-backend-n4tv.onrender.com/lecturer/lecturerpage";
 
   const [user, setuser] = useState("");
   const [admin, setadmin] = useState("");

@@ -8,7 +8,7 @@ import * as yup from "yup";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const Register = () => {
-  let url = "http://localhost:5007/user/register";
+  let url = "https://school-backend-n4tv.onrender.com/user/register";
   const [registeredUsers, setregisteredUsers] = useState([]);
   const [userqrcode, setuserqrcode] = useState("");
   const qrRef = useRef(null);

@@ -8,7 +8,8 @@ const CountView = (props) => {
   useEffect(() => {
     const sendReq = async () => {
       try {
-        let url = "http://localhost:5007/admin/adminpage/events";
+        let url =
+          "https://school-backend-n4tv.onrender.com/admin/adminpage/events";
         let admin = props.admin;
         let AdminqrCode = props.AdminqrCode;
         axios.post(url, { admin, AdminqrCode }).then((response) => {

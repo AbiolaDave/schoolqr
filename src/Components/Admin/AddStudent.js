@@ -6,7 +6,7 @@ import * as yup from "yup";
 import "./addLecturer.css";
 
 const AddStudent = () => {
-  let url = "http://localhost:5007/admin/studentregister";
+  let url = "https://school-backend-n4tv.onrender.com/admin/studentregister";
   let navigate = useNavigate();
 
   const formik = useFormik({

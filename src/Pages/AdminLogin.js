@@ -7,7 +7,7 @@ import "../Pages/adminLogin.css";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const AdminLogin = () => {
-  let url = "http://localhost:5007/admin/adminsignin";
+  let url = "https://school-backend-n4tv.onrender.com/admin/adminsignin";
   let navigate = useNavigate();
 
   const formik = useFormik({

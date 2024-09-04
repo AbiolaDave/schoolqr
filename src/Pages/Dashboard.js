@@ -11,7 +11,7 @@ import "./dashboard.css";
 const Dashboard = () => {
   let token = localStorage.token;
   let navigate = useNavigate();
-  let url = "http://localhost:5007/user/dashboard";
+  let url = "https://school-backend-n4tv.onrender.com/user/dashboard";
 
   const [user, setuser] = useState("");
 

@@ -14,7 +14,7 @@ const CoursesGrade = (props) => {
     console.log(props, props.lecturer);
     const sendReq = async () => {
       try {
-        let url = "http://localhost:5007/lecturer/courses";
+        let url = "https://school-backend-n4tv.onrender.com/lecturer/courses";
         let lecturer = props.user;
         const response = await axios.post(url, { lecturer });
         if (!response.data.status) {

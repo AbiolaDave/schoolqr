@@ -6,7 +6,7 @@ import * as yup from "yup";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const AdminRegister = () => {
-  let url = "http://localhost:5007/admin/adminregister";
+  let url = "https://school-backend-n4tv.onrender.com/admin/adminregister";
   let navigate = useNavigate();
 
   const formik = useFormik({

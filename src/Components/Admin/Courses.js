@@ -27,7 +27,7 @@ const Courses = () => {
     const fetchEvent = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5007/admin/adminpage/${courseId}`
+          `https://school-backend-n4tv.onrender.com/admin/adminpage/${courseId}`
         );
         console.log(response, response.data);
         setEvent(response.data);
@@ -52,7 +52,7 @@ const Courses = () => {
 
   const showQr = async () => {
     if (window.confirm("Are you sure you want to start the class?")) {
-      let url = "http://localhost:5007/lecturer/setattendance";
+      let url = "https://school-backend-n4tv.onrender.com/lecturer/setattendance";
       let courseCode = event.courseCode;
       try {
         axios.post(url, { courseCode }).then((response) => {
@@ -70,7 +70,7 @@ const Courses = () => {
   };
 
   useEffect(() => {
-    let url = "http://localhost:5007/lecturer/mystudents";
+    let url = "https://school-backend-n4tv.onrender.com/lecturer/mystudents";
     let courseCode = event;
     try {
       axios
@@ -91,7 +91,7 @@ const Courses = () => {
   }, [event]);
 
   useEffect(() => {
-    let url = "http://localhost:5007/lecturer/records";
+    let url = "https://school-backend-n4tv.onrender.com/lecturer/records";
     let courseCode = event;
     try {
       axios.post(url, courseCode).then((response) => {

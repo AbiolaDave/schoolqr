@@ -48,7 +48,7 @@ const EventsCountCoordinator = (admin) => {
     const fetchEvent = async () => {
       try {
         const response = await axios.get(
-          `https://eventtrackpro-backend.onrender.com/countcoordinator/countcoordinator/${eventId}`
+          `https://school-backend-n4tv.onrender.com/countcoordinator/countcoordinator/${eventId}`
         );
         setEvent(response.data);
         setaccept(new Array(response.data.count.length).fill(false));
@@ -115,7 +115,7 @@ const EventsCountCoordinator = (admin) => {
 
   const sendNotification = async () => {
     let url =
-      "https://eventtrackpro-backend.onrender.com/countcoordinator/countnotification";
+      "https://school-backend-n4tv.onrender.com/countcoordinator/countnotification";
     let counter = await eventCounter;
     let admin = await Admin;
     try {
@@ -133,7 +133,7 @@ const EventsCountCoordinator = (admin) => {
 
   const viewCount = async () => {
     let url =
-      "https://eventtrackpro-backend.onrender.com/countcoordinator/count";
+      "https://school-backend-n4tv.onrender.com/countcoordinator/count";
     let admin = await event.admin;
     let uniqueId = await event.uniqueId;
     axios
@@ -161,7 +161,7 @@ const EventsCountCoordinator = (admin) => {
 
   useEffect(() => {
     let url =
-      "https://eventtrackpro-backend.onrender.com/countcoordinator/rejectcount";
+      "https://school-backend-n4tv.onrender.com/countcoordinator/rejectcount";
     if (rejectedCounts.length > 0) {
       let rejectedId = rejectedCounts[0].uniqueId;
       let rejectedSender = rejectedCounts[0].sender;
@@ -253,7 +253,7 @@ const EventsCountCoordinator = (admin) => {
 
   const submitCount = async () => {
     let url =
-      "https://eventtrackpro-backend.onrender.com/countcoordinator/submit";
+      "https://school-backend-n4tv.onrender.com/countcoordinator/submit";
     let submittedCount = {
       totalMale,
       totalFemale,
@@ -300,7 +300,7 @@ const EventsCountCoordinator = (admin) => {
     },
     onSubmit: (values) => {
       let url =
-        "https://eventtrackpro-backend.onrender.com/countcoordinator/assigncounter";
+        "https://school-backend-n4tv.onrender.com/countcoordinator/assigncounter";
       if (window.confirm("Add New Event?")) {
         let eventObj = {
           ...values,

@@ -7,7 +7,7 @@ import "./addLecturer.css"
 // import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const AddLecturer = () => {
-  let url = "http://localhost:5007/admin/lecturerregister";
+  let url = "https://school-backend-n4tv.onrender.com/admin/lecturerregister";
   let navigate = useNavigate();
 
   const formik = useFormik({
