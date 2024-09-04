@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/schoolqr/static/css/main.3f88bc1e.css",
+    "main.js": "/schoolqr/static/js/main.0ee3844c.js",
+    "static/js/592.0589f734.chunk.js": "/schoolqr/static/js/592.0589f734.chunk.js",
+    "static/media/Emirates-Bold.ttf": "/schoolqr/static/media/Emirates-Bold.587405cf635bd3adb659.ttf",
+    "static/media/books.jpeg": "/schoolqr/static/media/books.0a112596a95e369d9d5c.jpeg",
+    "static/media/start-event-planning-service.jpg": "/schoolqr/static/media/start-event-planning-service.24df645d2447415813ab.jpg",
+    "static/media/college_students_2.jpeg": "/schoolqr/static/media/college_students_2.1414346d0829f81b385b.jpeg",
+    "static/media/Designer(7).jpeg": "/schoolqr/static/media/Designer(7).c33dafd53c6268b51ffb.jpeg",
+    "static/media/Designer(3).jpeg": "/schoolqr/static/media/Designer(3).445383b8d74f753203de.jpeg",
+    "static/media/Exam(1).jpeg": "/schoolqr/static/media/Exam(1).4854f51ebbbc67f0f968.jpeg",
+    "static/media/scanqr_2.jpeg": "/schoolqr/static/media/scanqr_2.e80045959143363f0e70.jpeg",
+    "static/media/ushers.jpg": "/schoolqr/static/media/ushers.8fd530f242f59fe7f50e.jpg",
+    "static/media/Lecturer_2.jpeg": "/schoolqr/static/media/Lecturer_2.4e3e39517ef0faad4c46.jpeg",
+    "static/media/scanqr.jpeg": "/schoolqr/static/media/scanqr.68831d5b37b8fc70e417.jpeg",
+    "static/media/event33.jpg": "/schoolqr/static/media/event33.22229107b128e5535946.jpg",
+    "static/media/video-for-event-marketing.jpg": "/schoolqr/static/media/video-for-event-marketing.63278dec278c60f43b94.jpg",
+    "static/media/security2.png": "/schoolqr/static/media/security2.65d237cd975b22472b39.png",
+    "static/media/event-image.jpg": "/schoolqr/static/media/event-image.9373a5fe91f3cd875621.jpg",
+    "service-worker.js": "/schoolqr/service-worker.js",
+    "static/media/pexels-ketut-subiyanto-4350099.avif": "/schoolqr/static/media/pexels-ketut-subiyanto-4350099.3765d084c75eb3f3140b.avif",
+    "static/media/attendance-logo1.jpeg": "/schoolqr/static/media/attendance-logo1.f6b18ae2609b9e2e5f6d.jpeg",
+    "index.html": "/schoolqr/index.html",
+    "main.3f88bc1e.css.map": "/schoolqr/static/css/main.3f88bc1e.css.map",
+    "main.0ee3844c.js.map": "/schoolqr/static/js/main.0ee3844c.js.map",
+    "592.0589f734.chunk.js.map": "/schoolqr/static/js/592.0589f734.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f88bc1e.css",
+    "static/js/main.0ee3844c.js"
+  ]
+}
