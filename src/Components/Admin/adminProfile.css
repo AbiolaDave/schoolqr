@@ -1,0 +1,23 @@
+.profile-pics img{
+    width: 150px !important;
+    height: 150px;
+    margin-left: 100px;
+    margin-top: 100px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+@font-face {
+  font-family: emirates;
+  src: url(../../multimedia/Emirates-Bold.ttf);
+}
+.profile-name{
+    margin-left: 120px;
+    color: green;
+    font-family: emirates;
+}
+.profile-details{
+    margin-left: 100px;
+    margin-top: 50px;
+    color: green;
+    font-family: emirates;
+}
