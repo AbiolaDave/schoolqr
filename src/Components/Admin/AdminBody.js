@@ -12,7 +12,7 @@ const AdminBody = (props) => {
     <>
       {/* <div> */}
       <div className="heroe">
-        <div className="container d-flex">
+        <div className="container d-flex cov">
           <div className="simplified">
             <img src={img13} alt="" />
           </div>

@@ -1,9 +1,9 @@
 import React from "react";
 // import img from ""
-import img13 from "../../multimedia/Designer(7).jpeg";
-import img12 from "../../multimedia/scanqr_2.jpeg";
-import img10 from "../../multimedia/Exam(1).jpeg";
 import img6 from "../../multimedia/Designer(3).jpeg";
+import img13 from "../../multimedia/Designer(7).jpeg";
+import img10 from "../../multimedia/Exam(1).jpeg";
+import img12 from "../../multimedia/scanqr_2.jpeg";
 import "../Admin/adminbody.css";
 
 const StudentsBody = (props) => {
@@ -11,7 +11,7 @@ const StudentsBody = (props) => {
     <>
       {/* <div> */}
       <div className="heroe">
-        <div className="container d-flex">
+        <div className="container d-flex cov">
           <div className="simplified">
             <img src={img13} alt="" />
           </div>
