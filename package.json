@@ -2,7 +2,7 @@
   "name": "qr-counter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AbiolaDave.github.io/schoolqr",
+  "homepage": "https://schoolqr.vercel.app/schoolqr",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
