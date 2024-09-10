@@ -119,7 +119,7 @@ const AddCourse = (props) => {
         <div className="cointainer col-5 col-sm-4 mx-auto p-3 mt-5  ">
           <div className="text-center text-success fw-bold">
             {/* <div>Hello {props.admin}</div> */}
-            <h1 className="fw-bold">Add Course</h1>
+            <h1 className="fw-bold">Add New Course</h1>
           </div>
           <div>
             <form action="" onSubmit={formik.handleSubmit}>
