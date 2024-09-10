@@ -116,7 +116,7 @@ const AddCourse = (props) => {
   return (
     <>
       <div className="create">
-        <div className="cointainer col-5 col-sm-4 mx-auto p-3 mt-5  ">
+        <div className="cointainer-two col-5 col-sm-4 mx-auto p-3 mt-5  ">
           <div className="text-center text-success fw-bold">
             {/* <div>Hello {props.admin}</div> */}
             <h1 className="fw-bold">Add New Course</h1>
