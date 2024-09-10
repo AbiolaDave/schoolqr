@@ -4,7 +4,6 @@ import "./adminbody.css";
 import img12 from "../../multimedia/Lecturer_2.jpeg";
 import img10 from "../../multimedia/books.jpeg";
 import img6 from "../../multimedia/college_students_2.jpeg";
-import img14 from "../../multimedia/scanqr.jpeg";
 import img13 from "../../multimedia/video-for-event-marketing.jpg";
 
 const AdminBody = (props) => {
@@ -17,7 +16,7 @@ const AdminBody = (props) => {
             <img src={img13} alt="" />
           </div>
           <div className="enroll mx-5 mt-5">
-            <h1>Simplified Enrollment Process </h1>
+            <h1>Simplified Enrollment Process</h1>
             <p>
               Enrolling students and managing courses has never been easier. Our
               portal simplifies the entire process, making it quick and
