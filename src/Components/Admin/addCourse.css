@@ -20,7 +20,7 @@
 }
 @media only screen and (max-width: 499px) {
     .create{
-        background-color: white;
+        background-color: white !important;
     }
     .med{
         margin-left: -450px !important;
