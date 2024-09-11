@@ -53,8 +53,12 @@ const Grade = () => {
 
   const showQr = async () => {
     if (window.confirm("Are you sure you want to start the class?")) {
+<<<<<<< HEAD
       let url =
         "https://school-backend-n4tv.onrender.com/lecturer/setattendance";
+=======
+      let url = "https://school-backend-n4tv.onrender.com/lecturer/setattendance";
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
       let courseCode = event.courseCode;
       try {
         axios.post(url, { courseCode }).then((response) => {
@@ -142,6 +146,7 @@ const Grade = () => {
     <>
       <MainNavbar />
       <div className="showEvent">
+<<<<<<< HEAD
         <div className="container text-center mx-auto med">
           <div className="text-center text-light bg-success p-1 fw-bold">
             <h3 className="mt-2">Course Details</h3>
@@ -231,6 +236,87 @@ const Grade = () => {
             <div></div>
           )}
         </div>
+=======
+        <div className="text-center text-light bg-success p-1 fw-bold">
+          <h3 className="mt-2">Course Details</h3>
+        </div>
+        {event ? (
+          <>
+            <div className="text-center mt-5 mb-5">
+              <h2>{event.eventName}</h2>
+              <p>Course Name: {event.courseName}</p>
+              <p>Course Code: {event.courseCode}</p>
+              <p>Course Details: {event.courseDetails}</p>
+
+              <button onClick={viewStudents} className="btn btn-warning">
+                Students
+              </button>
+            </div>
+            <div>
+              {startButton ? (
+                <div>
+                  {allStudents.map((each, index) => (
+                    <>
+                      <div className="text-center mt-4 mx-auto">
+                        <table className="table">
+                          <thead>
+                            <th>S/N</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Matric No</th>
+                            <th>Test</th>
+                            <th>Exam</th>
+                            <th>Total</th>
+                            <th>Grade</th>
+                          </thead>
+                          <tbody>
+                            <td className="col-sm-1 col-1"><p>{index}</p></td>
+                            <td className="col-sm-1 col-1"><p>{each.firstname}</p></td>
+                            <td className="col-sm-1 col-1">
+                              <p>{each.middlename}</p>
+                            </td>
+                            <td className="col-sm-1 col-1"><p>{each.lastname}</p></td>
+                            <td className="col-sm-1 col-1"><p>{each.matricNo}</p></td>
+                            <td className="col-sm-1 col-1">
+                              <input
+                                className="bdl form-control col-sm-1 col-1"
+                                type="number"
+                              />
+                            </td>
+                            <td className="col-sm-1 col-1">
+                              <input
+                                className="bdl form-control col-sm-1 col-1"
+                                type="number"
+                              />
+                            </td>
+                            <td className="col-sm-1 col-1">
+                              <input
+                                className="bdl form-control col-sm-1 col-1"
+                                type="number"
+                              />
+                            </td>
+                            <td className="col-sm-1 col-1">
+                              <input
+                                className="bdl form-control col-sm-1 col-1"
+                                type="text"
+                              />
+                            </td>
+                          </tbody>
+                        </table>
+                      </div>
+                    </>
+                  ))}
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          </>
+        ) : (
+          <div></div>
+        )}
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
       </div>
     </>
   );

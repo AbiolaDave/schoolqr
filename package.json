@@ -39,7 +39,10 @@
     "yup": "^1.3.3"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "react-scripts start",
+=======
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "cross-env CI=false react-scripts build"

@@ -119,6 +119,121 @@
 .nav-det {
   display: none !important;
 }
+<<<<<<< HEAD
+=======
+
+@media only screen and (max-width: 499px) {
+  .admin {
+    display: none !important;
+  }
+  .cov {
+    display: flex !important;
+    flex-direction: column;
+    flex-flow: column-reverse;
+  }
+  .enroll {
+    color: green;
+    font-family: emirates;
+    max-width: 300px !important;
+    line-height: 30px;
+    margin-left: 10px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+  }
+  .enroll p {
+    max-width: 350px;
+  }
+  .simplified {
+    width: 70px !important;
+    height: 300px !important;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 1px 1px lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .simplified img {
+    width: 80% !important;
+    height: auto;
+  }
+  .heroe {
+    position: relative;
+    display: block;
+    background-color: lightgray;
+    height: 310vh;
+    overflow-x: hidden !important;
+  }
+  .my-blog {
+    /* border: 1px solid red; */
+    height: 2000px !important;
+    background-color: lightgray !important;
+  }
+  .blog-grid {
+    display: grid;
+    padding: 2rem !important;
+    gap: 2rem;
+    position: relative;
+    grid-template-columns: repeat(1, 300px) !important;
+    grid-template-rows: repeat(3, 420px) !important;
+    font-family: emirates;
+    height: 400px;
+    margin-left: 0px;
+  }
+  .box0 {
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 5px 5px 5px 5px lightgray;
+    overflow: hidden;
+    border-radius: 10px !important;
+  }
+  .box0 img {
+    position: relative;
+    width: 400px;
+    height: 50%;
+    position: relative;
+    background-size: cover;
+    object-fit: fill;
+  }
+  .divide {
+    height: 115px;
+  }
+  .box0 h5 {
+    color: green;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .box0 p {
+    margin-left: 10px;
+    min-width: 300px !important;
+    /* max-width: 750px !important; */
+  }
+  .tag {
+    position: absolute;
+    display: flex;
+    padding: 10px;
+    height: 30px;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 3px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+    margin-top: -15px;
+  }
+  .author {
+    margin-top: -5px;
+  }
+  .nav-det {
+    display: block !important;
+  }
+}
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
 @media only screen and (max-width: 999px) {
   .admin {
     /* background-color: red; */
@@ -245,6 +360,7 @@
     display: block !important;
   }
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 499px) {
   .admin {
@@ -360,3 +476,5 @@
     display: block !important;
   }
 }
+=======
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a

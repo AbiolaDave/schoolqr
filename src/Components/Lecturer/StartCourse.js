@@ -54,8 +54,12 @@ const StartCourse = () => {
 
   const showQr = async () => {
     if (window.confirm("Are you sure you want to start the class?")) {
+<<<<<<< HEAD
       let url =
         "https://school-backend-n4tv.onrender.com/lecturer/setattendance";
+=======
+      let url = "https://school-backend-n4tv.onrender.com/lecturer/setattendance";
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
       let courseCode = event.courseCode;
       try {
         axios.post(url, { courseCode }).then((response) => {
@@ -119,6 +123,7 @@ const StartCourse = () => {
         )
     );
 
+<<<<<<< HEAD
     records.map((each, index) => {
       each.students.map((student, studentIndex) => {
         {
@@ -132,6 +137,21 @@ const StartCourse = () => {
         setTableIndex(studentIndex);
       });
     });
+=======
+    records.map((each, index)=>{
+        each.students.map((student, studentIndex)=>{
+            {
+              setTableIndex(studentIndex);
+            }
+        })
+    })
+
+    records.map((each, index)=>{
+        each.students.map((student, studentIndex)=>{
+            setTableIndex(studentIndex)
+        })
+    })
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
     setStudentRecord(absentStudents);
   }, [allStudents, records]);
 
@@ -141,6 +161,7 @@ const StartCourse = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <MainNavbar />
       <div className="showEvent">
         <div className="container text-center mx-auto med">
@@ -183,6 +204,29 @@ const StartCourse = () => {
 
                       <div>
                         {studentRecord.map((absentStudent, absentIndex) => (
+=======
+    <MainNavbar />
+      <div className="showEvent">
+        <div className="text-center text-light bg-success p-1 fw-bold">
+          <h3 className="mt-2">Course Details</h3>
+        </div>
+        {event ? (
+          <>
+            <div className="text-center mt-5 mb-5">
+              <h2>{event.eventName}</h2>
+              <p>Course Name: {event.courseName}</p>
+              <p>Course Code: {event.courseCode}</p>
+              <p>Course Details: {event.courseDetails}</p>
+
+              {records.length > 0 ? (
+                records.map((each, index) => (
+                  <div key={index}>
+                    <h4>Date: {each.date}</h4>
+                    <div>
+                      <h5>Attendance Records:</h5>
+                      {each.students.map((student, studentIndex) => (
+                        <>
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
                           <table className="table">
                             <thead>
                               <th>S/N</th>
@@ -191,6 +235,7 @@ const StartCourse = () => {
                               <th>Status</th>
                             </thead>
                             <tbody>
+<<<<<<< HEAD
                               <td>{tableIndex + absentIndex + 2}</td>
                               <td>{absentStudent.firstname}</td>
                               <td>{absentStudent.matricNo}</td>
@@ -277,6 +322,113 @@ const StartCourse = () => {
             <div></div>
           )}
         </div>
+=======
+                              <td>{studentIndex + 1}</td>
+                              <td>{student.name}</td>
+                              <td>{student.matricNo}</td>
+                              <td>Present</td>
+                            </tbody>
+                          </table>
+                        </>
+                      ))}
+                    </div>
+
+                    <div>
+                      {studentRecord.map((absentStudent, absentIndex) => (
+                        <table className="table">
+                          <thead>
+                            <th>S/N</th>
+                            <th>Name</th>
+                            <th>MatricNo</th>
+                            <th>Status</th>
+                          </thead>
+                          <tbody>
+                            <td>{tableIndex + absentIndex + 2}</td>
+                            <td>{absentStudent.firstname}</td>
+                            <td>{absentStudent.matricNo}</td>
+                            <td>Absent</td>
+                          </tbody>
+                        </table>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div>
+                  <h1>Nothing</h1>
+                </div>
+              )}
+
+              {scanQrCode ? (
+                <>
+                  <div className="mt-3 mb-3" ref={qrRef}>
+                    <QRCode
+                      size={456}
+                      style={{
+                        height: "350px",
+                        maxWidth: "350px",
+                        width: "50%",
+                      }}
+                      value={event.uniqueId}
+                      id="qrCanvas"
+                      viewBox={`0 0 256 256`}
+                    />
+                  </div>
+                  <div className="text-center container col-4">
+                    <button
+                      className="btn btn-success form-control mt-3 col-3"
+                      onClick={downloadQRCode}
+                    >
+                      Download QR Code
+                    </button>
+                  </div>
+                </>
+              ) : null}
+
+              <button className="btn btn-success mt-3 mx-3" onClick={showQr}>
+                Start Class
+              </button>
+            </div>
+            <div className="mx-auto text-center">
+              <button onClick={viewStudents} className="btn btn-warning">
+                Students
+              </button>
+            </div>
+            <div>
+              {startButton ? (
+                <div>
+                  {allStudents.map((each, index) => (
+                    <>
+                      <div className="text-center mt-4 mx-auto">
+                        <table className="table">
+                          <thead>
+                            <th>S/N</th>
+                            <th>First Name</th>
+                            <th>Middle Name</th>
+                            <th>Last Name</th>
+                            <th>Matric No</th>
+                          </thead>
+                          <tbody>
+                            <td>{index}</td>
+                            <td>{each.firstname}</td>
+                            <td>{each.middlename}</td>
+                            <td>{each.lastname}</td>
+                            <td>{each.matricNo}</td>
+                          </tbody>
+                        </table>
+                      </div>
+                    </>
+                  ))}
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          </>
+        ) : (
+          <div></div>
+        )}
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
       </div>
     </>
   );

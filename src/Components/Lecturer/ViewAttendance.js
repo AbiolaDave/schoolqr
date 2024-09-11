@@ -13,7 +13,11 @@ const Courses = () => {
   const [allStudents, setAllStudents] = useState([]);
   const [records, setRecords] = useState([]);
   const [scanQrCode, setscanQrCode] = useState(false);
+<<<<<<< HEAD
   const [startButton, setstartButton] = useState(false);
+=======
+  const [startButton, setstartButton] = useState(false)
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
   const { courseId } = useParams();
   const navigate = useNavigate();
   const qrRef = useRef(null);
@@ -46,8 +50,12 @@ const Courses = () => {
 
   const showQr = async () => {
     if (window.confirm("Are you sure you want to start the class?")) {
+<<<<<<< HEAD
       let url =
         "https://school-backend-n4tv.onrender.com/lecturer/setattendance";
+=======
+      let url = "https://school-backend-n4tv.onrender.com/lecturer/setattendance";
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
       let courseCode = event.courseCode;
       try {
         axios.post(url, { courseCode }).then((response) => {
@@ -108,6 +116,7 @@ const Courses = () => {
   return (
     <>
       <div className="showEvent">
+<<<<<<< HEAD
         <div className="container text-center mx-auto med">
           <div className="text-center text-light bg-success p-1 fw-bold">
             <h3 className="mt-2">Courses</h3>
@@ -193,6 +202,91 @@ const Courses = () => {
             <div></div>
           )}
         </div>
+=======
+        <div className="text-center text-light bg-success p-1 fw-bold">
+          <h3 className="mt-2">Courses</h3>
+        </div>
+        {event ? (
+          <>
+            <div className="text-center mt-5 mb-5">
+              <h2>{event.eventName}</h2>
+              <p>Course Name: {event.courseName}</p>
+              <p>Course Code: {event.courseCode}</p>
+              <p>Course Details: {event.courseDetails}</p>
+
+              {records ? (
+                <>
+                  {records.map((each, index) => (
+                    <div key={index}>
+                      <h4>Day {index + 1}</h4>
+                      {each.students.map((student, sIndex) => (
+                        <p key={sIndex}>
+                          {student.name} - {student.matricNo}
+                        </p>
+                      ))}
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <div>
+                  <h1>Nothing</h1>
+                </div>
+              )}
+
+              {scanQrCode ? (
+                <>
+                  <div className="mt-3 mb-3" ref={qrRef}>
+                    <QRCode
+                      size={456}
+                      style={{
+                        height: "350px",
+                        maxWidth: "350px",
+                        width: "50%",
+                      }}
+                      value={event.uniqueId}
+                      id="qrCanvas"
+                      viewBox={`0 0 256 256`}
+                    />
+                  </div>
+                  <div className="text-center container col-4">
+                    <button
+                      className="btn btn-success form-control mt-3 col-3"
+                      onClick={downloadQRCode}
+                    >
+                      Download QR Code
+                    </button>
+                  </div>
+                </>
+              ) : null}
+
+              <button className="btn btn-success mt-3 mx-3" onClick={showQr}>
+                Start Class
+              </button>
+            </div>
+            <div className="mx-auto text-center">
+              <button onClick={viewStudents} className="btn btn-warning">
+                Students
+              </button>
+            </div>
+            <div>
+              {startButton ? (
+                <div>
+                  {allStudents.map((each, index) => (
+                    <div key={index}>
+                      <div>{each.firstname}</div>
+                      <div>{each.matricNo}</div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          </>
+        ) : (
+          <div></div>
+        )}
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
       </div>
     </>
   );

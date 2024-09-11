@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+<<<<<<< HEAD
 // import "./addCourse.css";
+=======
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
 import {
   addCourse,
   addLecturer,
@@ -28,7 +31,11 @@ const AdminMenu = () => {
         <div className=" d-flex text-success">
           <a className="loginstyle" href="/">
             <i
+<<<<<<< HEAD
               class="fa-solid fa-house fa-2xl mx-2 my-2 icons"
+=======
+              class="fa-solid fa-house fa-2xl mx-2 my-2 "
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
               style={{ color: "green" }}
             ></i>
             <h5 className="fw-bold">Home</h5>
@@ -39,7 +46,11 @@ const AdminMenu = () => {
           onClick={() => dispatch(profile())}
         >
           <i
+<<<<<<< HEAD
             class="fa-solid fa-user fa-2xl mx-2 my-2 icons"
+=======
+            class="fa-solid fa-user fa-2xl mx-2 my-2"
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             style={{ color: "green" }}
           ></i>
           <h5 className="fw-bold">Profile</h5>
@@ -49,7 +60,11 @@ const AdminMenu = () => {
           className="mt-5 d-flex loginstyle"
         >
           <i
+<<<<<<< HEAD
             class="fa-solid fa-book fa-2xl mx-2 my-2 icons"
+=======
+            class="fa-solid fa-book fa-2xl mx-2 my-2"
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             style={{ color: "green" }}
           ></i>
           <h5 className="fw-bold">Add Course</h5>
@@ -59,7 +74,11 @@ const AdminMenu = () => {
           className="mt-5 d-flex loginstyle"
         >
           <i
+<<<<<<< HEAD
             class="fa-solid fa-user-tie fa-2xl mx-2 my-2 icons"
+=======
+            class="fa-solid fa-user-tie fa-2xl mx-2 my-2"
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             style={{ color: "green" }}
           ></i>
           <h5 className="fw-bold">Add Lecturer</h5>
@@ -69,7 +88,11 @@ const AdminMenu = () => {
           onClick={() => dispatch(addStudent())}
         >
           <i
+<<<<<<< HEAD
             class="fa-solid fa-person fa-2xl mx-2 my-2 icons"
+=======
+            class="fa-solid fa-person fa-2xl mx-2 my-2"
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             style={{ color: "green" }}
           ></i>
           <h5 className="fw-bold">Add Students</h5>
@@ -79,7 +102,11 @@ const AdminMenu = () => {
           className="mt-5 d-flex loginstyle"
         >
           <i
+<<<<<<< HEAD
             class="fa-solid fa-eye fa-2xl mx-2 my-2 icons"
+=======
+            class="fa-solid fa-eye fa-2xl mx-2 my-2"
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             style={{ color: "green" }}
           ></i>
           <h5 className="fw-bold">View Courses</h5>
@@ -89,7 +116,11 @@ const AdminMenu = () => {
           onClick={() => dispatch(viewStudents())}
         >
           <i
+<<<<<<< HEAD
             class="fa-solid fa-people-group fa-2xl mx-2 my-2 icons"
+=======
+            class="fa-solid fa-people-group fa-2xl mx-2 my-2"
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             style={{ color: "green" }}
           ></i>
           <h5 className="fw-bold">All Students</h5>
@@ -99,7 +130,11 @@ const AdminMenu = () => {
           onClick={() => dispatch(viewLecturers())}
         >
           <i
+<<<<<<< HEAD
             class="fa-solid fa-users fa-2xl mx-2 my-2 icons"
+=======
+            class="fa-solid fa-users fa-2xl mx-2 my-2"
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             style={{ color: "green" }}
           ></i>
           <h5 className="fw-bold">All Lecturers</h5>

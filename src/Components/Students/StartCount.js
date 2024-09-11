@@ -1,4 +1,8 @@
 import axios from "axios";
+<<<<<<< HEAD
+=======
+import { Html5QrcodeScanner } from "html5-qrcode";
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
 import React, { useEffect, useState } from "react";
 
 const StartCount = (props) => {
@@ -7,8 +11,15 @@ const StartCount = (props) => {
   const [foundEvent, setFoundEvent] = useState([]);
   const [foundAdmin, setFoundAdmin] = useState([]);
 
+<<<<<<< HEAD
   useEffect(() => {
     let url = "https://school-backend-n4tv.onrender.com/counter/countevent";
+=======
+
+  useEffect(() => {
+      let url = "https://school-backend-n4tv.onrender.com/counter/countevent";
+    
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
   }, [foundAdmin, admin]);
 
   const sendReq = async (result) => {
@@ -95,6 +106,7 @@ const StartCount = (props) => {
   return (
     <>
       <div className="create-two">
+<<<<<<< HEAD
         <div className="container text-center mx-auto med">
           <div className="container-two col-5 col-sm-4 mx-auto p-3 mt-5">
             <div className="text-center text-success fw-bold">
@@ -133,6 +145,44 @@ const StartCount = (props) => {
             </div>
             <div></div>
           </div>
+=======
+        <div className="container-two col-5 col-sm-4 mx-auto p-3 mt-5">
+          <div className="text-center text-success fw-bold">
+            <h3 className="fw-bold">Scan Event</h3>
+          </div>
+          <div className="mt-5">
+            {foundAdmin.map((scanResult, index) => (
+              <div key={index} className="mt-3">
+                <h2 className="text-success">Counter {index + 1}</h2>
+                <div>
+                  {scanResult ? (
+                    <ul>
+                      <li>
+                        <p>Event Name: {foundAdmin[0].eventName}</p>
+                      </li>
+                      <li>
+                        <p>Date: {foundAdmin[0].setDate}</p>
+                      </li>
+                      <li>
+                        <p>Rows: {foundAdmin[0].addRow}</p>
+                      </li>
+                      <li>
+                        <p>Event Id: {foundAdmin[0].eventId}</p>
+                      </li>
+                      <li>
+                        <p>Admin: {foundAdmin[0].admin}</p>
+                      </li>
+                    </ul>
+                  ) : (
+                    <div>Error scanning user</div>
+                  )}
+                </div>
+              </div>
+            ))}
+            <div id="reader">Scan QR Code</div>
+          </div>
+          <div></div>
+>>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
         </div>
       </div>
     </>
