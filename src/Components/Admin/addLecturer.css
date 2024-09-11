@@ -1,0 +1,9 @@
+.lect{
+ background: lightgray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 1300px;
+  height: 1200px;
+  color: green;
+  font-family: emirates;
+}
