@@ -48,7 +48,6 @@ const LecturerStudents = (props) => {
   return (
     <div className="showEvent">
       <div className="coc">
-<<<<<<< HEAD
         <div className="container text-center mx-auto med">
           <div className="text-center text-light bg-success p-1 fw-bold">
             <h3 className="fw-bold">My Students</h3>
@@ -88,45 +87,6 @@ const LecturerStudents = (props) => {
               </div>
             )}
           </div>
-=======
-        <div className="text-center text-light bg-success p-1 fw-bold">
-          <h3 className="fw-bold">My Students</h3>
-        </div>
-        <div className="text-success">
-          {events.length > 0 ? (
-            events.map((eachEvent) => (
-              <>
-                <div className="coco">
-                  <ul
-                    className="text-success mx-auto mb-5"
-                    key={eachEvent.courseId}
-                  >
-                    <li>
-                      <Link
-                        className="listing"
-                        onClick={() => dispatch(setSender(props.user))}
-                        to={`/adminpage/${eachEvent.courseId}`}
-                        key={eachEvent.courseId}
-                      >
-                        {console.log(events, eachEvent.courseId)}
-                        <p>First Name: {eachEvent.firstname}</p>
-                        <p>Last Name: {eachEvent.lastname}</p>
-                        <p>Middle Name: {eachEvent.middlename}</p>
-                        <p>Email: {eachEvent.email}</p>
-                        <p>Gender: {eachEvent.gender}</p>
-                        <p>Address: {eachEvent.address}</p>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </>
-            ))
-          ) : (
-            <div className="coc">
-              <p>No events found...</p>
-            </div>
-          )}
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
         </div>
       </div>
     </div>

@@ -3,11 +3,7 @@ import { useFormik } from "formik";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
-<<<<<<< HEAD
-import "./addLecturer.css";
-=======
 import "./addLecturer.css"
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
 // import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const AddLecturer = () => {
@@ -42,24 +38,15 @@ const AddLecturer = () => {
         });
 
         if (response.data.status) {
-<<<<<<< HEAD
-          console.log(response.data);
-          window.confirm("Lecturer has been added successfully");
-=======
             console.log(response.data)
             window.confirm("Lecturer has been added successfully")
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
         } else {
           console.log(response.data.message);
         }
       } catch (error) {
         console.error("There was an error!", error);
       }
-<<<<<<< HEAD
-      formik.resetForm();
-=======
         formik.resetForm();
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
     },
     validationSchema: yup.object({
       firstname: yup.string().required("This field is required"),
@@ -81,23 +68,13 @@ const AddLecturer = () => {
   });
   return (
     <main className="min-vh-200 lect d-flex justify-content-center align-items-center">
-<<<<<<< HEAD
       <div className="container mt-5 med">
-=======
-      <div className="container mt-5">
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
         <div className="row">
           <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5">
             <div className="text-center mt-5">
               {/* <img className="" height="50px" src={countlogo} alt="" /> */}
             </div>
-<<<<<<< HEAD
-            <h4 className="text-center fw-bold text-success">
-              Register Lecturer
-            </h4>
-=======
             <h4 className="text-center fw-bold text-success">Register Lecturer</h4>
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
             <form onSubmit={formik.handleSubmit}>
               <label htmlFor="firstname" className="text-success fw-bold">
                 Firstname:

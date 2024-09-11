@@ -67,11 +67,7 @@ const AddStudent = () => {
   });
   return (
     <main className="min-vh-200 lect d-flex justify-content-center align-items-center">
-<<<<<<< HEAD
       <div className="container mt-5 med">
-=======
-      <div className="container mt-5">
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
         <div className="row">
           <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5">
             <div className="text-center mt-5">

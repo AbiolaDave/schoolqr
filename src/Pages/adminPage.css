@@ -119,9 +119,6 @@
 .nav-det {
   display: none !important;
 }
-<<<<<<< HEAD
-=======
-
 @media only screen and (max-width: 499px) {
   .admin {
     display: none !important;
@@ -233,7 +230,6 @@
     display: block !important;
   }
 }
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
 @media only screen and (max-width: 999px) {
   .admin {
     /* background-color: red; */
@@ -360,7 +356,6 @@
     display: block !important;
   }
 }
-<<<<<<< HEAD
 
 @media only screen and (max-width: 499px) {
   .admin {
@@ -476,5 +471,3 @@
     display: block !important;
   }
 }
-=======
->>>>>>> b00b73cf63847654a19e0002b250de6149f8932a
